@@ -145,7 +145,7 @@ echo "</table>";
 
 
 echo "<br>" ;
-
+echo "<br>";
 //example 10
 for ($i=1; $i <= 50; $i++) { 
     if ($i % 3 == 0  && $i % 5 == 0) {
@@ -159,7 +159,7 @@ for ($i=1; $i <= 50; $i++) {
         echo $i . "\t";
     }
 }
-
+echo "<br>";
 echo "<br>" ;
 //example 11
 function pr($n){
@@ -180,7 +180,7 @@ function pr($n){
     }
 }
 
-pr(10);
+pr(15);
 
 
 echo "<br>" ;
