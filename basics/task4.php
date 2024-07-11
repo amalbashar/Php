@@ -2,17 +2,22 @@
 <?php
 #<!-- Q1 -->
 
-$number = 49;
-if  ($number ==2  || $number == 3 ||  $number == 5 ) {
-    echo $number . "is  a prime number" . "<br>";
+$echo "------- q1-------" . "<br>" . "<br>"; 
+function checkPrime($x) {
+    if ($x < 2) {
+        return "$x is not prime";
+    }
+    
+    for ($i = 2; $i <= sqrt($x); $i += 1) {
+        if ($x % $i === 0) {
+            return "$x is not prime";
+        }
+    }
+    return "$x is prime";
+}
 
-}
-else if($number%2 == 0 || $number%3 == 0 || $number%5 == 0 || $number <= 1) {
-    echo $number . "is not a prime number" . "<br>";
-}
-else{
-    echo $number . "is  a prime number" . "<br>";}
-     
+$x = 49;
+echo checkPrime($x) . "<br>";
 
 
 #<!-- Q2 -->
