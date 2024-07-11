@@ -42,7 +42,33 @@ echo substr($str1, -3) ."<br>";
 
 #7
 
-
+function get_password($str, $len = 0) { 
+      
+  // Variable $pass to store password 
+  $pass = ""; 
+   
+  // Variable $str_length to store 
+  // length of the given string 
+  $str_length = strlen($str); 
+ 
+  // Check if the $len is not provided 
+  // or $len is greater than $str_length 
+  // then assign $str_length into $len 
+  if($len == 0 || $len > $str_length){ 
+      $len = $str_length; 
+  } 
+ 
+  // Shuffle the string  
+  $pass = str_shuffle($str); 
+       
+  // Extract the part of string 
+  $pass = substr($pass, 0, $len); 
+   
+  return $pass;  //str_shuffle() is better than this function 
+} 
+$str = "GeeksForGeeks"; 
+echo get_password($str, 5) . "\n<br/>";
+echo "</br> ";
 
 
 
